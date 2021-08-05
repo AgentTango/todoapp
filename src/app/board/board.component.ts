@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteModel } from "../../models/noteModel";
+import notesData from "../../data/MOCK_DATA.json";
 
 @Component({
   selector: 'app-board',
@@ -7,14 +8,9 @@ import { NoteModel } from "../../models/noteModel";
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit{
-  notes:NoteModel[] | undefined;
-  
+  notes: NoteModel[] | undefined ;
   ngOnInit():void {
     // TODO Fetch Data
-    this.notes=[
-      {id:1,title:"Title 1",desc:"Desc 1"},
-      {id:1,title:"Title 2",desc:"Desc 2"},
-      {id:1,title:"Title 3",desc:"Desc 3"}
-    ]
+    this.notes=notesData;
   }
 }

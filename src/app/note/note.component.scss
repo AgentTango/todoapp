@@ -1,3 +1,12 @@
 mat-card{
     margin: 8px;
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
